@@ -1,5 +1,6 @@
 'use strict';
 var uuid = require("uuid");
+var builder = require('xmlbuilder');
 
 /**
  * What this library needs to do?
@@ -72,3 +73,7 @@ exports.GenerateUserProfileImage = function(a) {
         }
     });
 };
+
+function exportJson(response) {
+    return JSON.stringify(response);
+}
