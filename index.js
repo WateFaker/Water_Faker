@@ -26,6 +26,9 @@ exports.GenerateRandomUser = function(a) {
 
 exports.GenerateUserName = function(a) {
     return new Promise((resolve, reject) => {
+        generateName('female');
+        generateName('male');
+        generateName();
         if (a == null) {
             resolve("It is null")
         } else {
@@ -74,6 +77,18 @@ exports.GenerateUserProfileImage = function(a) {
     });
 };
 
+function exportString() {
+
+}
+
 function exportJson(response) {
     return JSON.stringify(response);
+}
+
+//response must be a json
+function exportXML(response) {
+    return builder.create('root')
+        .ele('xmlbuilder')
+        .ele('name', {'type': 'tag'}, 'value')
+        .end({pretty: true});
 }
