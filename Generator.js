@@ -1,13 +1,14 @@
 const generateUser = () => {
-
+    return {
+        first: getFirstValue(),
+        second: getSecondValue(),
+    };
 }
 
-const generateName = () => {
-
-}
-
-const generateEmail = () => {
-
+let emailDomainList = ['@gmail.com', '@yahoo.com', '@hotmail.com', '@icloud.com', '@outlook.com'];
+const generateEmail = (customEmailDomain, length = 0) => {
+    return randomValue(length > 0 ? length : Math.floor(Math.random() * 20), '#a') +
+        (customEmailDomain === null ? emailDomainList[Math.floor(Math.random() * emailDomainList.length)] : customEmailDomain);
 }
 
 const generatePassword = (includeSpecialCharacters, length = 0) => {
