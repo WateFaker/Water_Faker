@@ -1,6 +1,4 @@
 'use strict';
-var uuid = require("uuid");
-var builder = require('xmlbuilder');
 
 /**
  * What this library needs to do?
@@ -76,19 +74,3 @@ exports.GenerateUserProfileImage = function(a) {
         }
     });
 };
-
-function exportString() {
-
-}
-
-function exportJson(response) {
-    return JSON.stringify(response);
-}
-
-//response must be a json
-function exportXML(response) {
-    return builder.create('root')
-        .ele('xmlbuilder')
-        .ele('name', {'type': 'tag'}, 'value')
-        .end({pretty: true});
-}
