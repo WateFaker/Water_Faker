@@ -1,7 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 import builder from "xmlbuilder";
 
-//outputType, numberOfUsers
+/**
+ * variable options may consist of the following values:
+ * outputType, numberOfUsers, gender, custom_email_domain, email_length, include_special_password, password_length
+ * @param options
+ * @returns {string|*}
+ */
 const generateListOfUsers = (options) => {
     let count = options.numberOfUsers || 5; //5 will be default
     var response = [];
@@ -11,11 +16,11 @@ const generateListOfUsers = (options) => {
 
     switch (options.outputType || "json") {
         case "json":
-            return exportJson(response);
+            return JSON.stringify(response);
         case "xml":
             return exportXML(response);
         case "string":
-            return exportString(response);
+            return response.toString();
         default:
             console.log("none are selected");
     }
@@ -61,14 +66,6 @@ const randomValue = (length, code) => {
     return result;
 }
 
-const exportString = (response) => {
-
-}
-
-const exportJson = (response) => {
-    return JSON.stringify(response);
-}
-
 //response must be a json
 const exportXML = (response) => {
     var root = builder.create('users'); //could be root as well
@@ -82,7 +79,11 @@ const exportXML = (response) => {
     }
 
     response.forEach(element => {
-       console.log(element);
+       console.log(element.id);
+       console.log(element.name);
+       console.log(element.email);
+       console.log(element.password);
+       console.log(element.profile_image);
     });
     return root.end({ pretty: true });
 }
