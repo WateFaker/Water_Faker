@@ -1,4 +1,5 @@
 'use strict';
+var uuid = require("uuid");
 
 /**
  * What this library needs to do?
@@ -13,6 +14,56 @@
 
 var exports = module.exports = {};
 exports.GenerateRandomUser = function(a) {
+    return new Promise((resolve, reject) => {
+        if (a == null) {
+            resolve("It is null")
+        } else {
+            reject("It is not null")
+        }
+    });
+};
+
+exports.GenerateUserName = function(a) {
+    return new Promise((resolve, reject) => {
+        if (a == null) {
+            resolve("It is null")
+        } else {
+            reject("It is not null")
+        }
+    });
+};
+
+exports.GenerateUserPassword = function(a) {
+    return new Promise((resolve, reject) => {
+        if (a == null) {
+            resolve("It is null")
+        } else {
+            reject("It is not null")
+        }
+    });
+};
+
+exports.GenerateUserEmail = function(a) {
+    return new Promise((resolve, reject) => {
+        if (a == null) {
+            resolve("It is null")
+        } else {
+            reject("It is not null")
+        }
+    });
+};
+
+exports.GenerateUserID = function(a) {
+    return new Promise((resolve, reject) => {
+        if (a == null) {
+            resolve("It is null")
+        } else {
+            reject("It is not null")
+        }
+    });
+};
+
+exports.GenerateUserProfileImage = function(a) {
     return new Promise((resolve, reject) => {
         if (a == null) {
             resolve("It is null")
