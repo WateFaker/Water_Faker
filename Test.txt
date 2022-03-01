@@ -1,0 +1,40 @@
+Test 1(Shrutwa) - Pass:
+	Successfully generates a male user.
+Code Used
+let options = {
+    gender: "male",
+    custom_email_domain: null,
+    email_length: 0,
+    include_special_password: false,
+    password_length: 0
+}
+let list = GenerateRandomListOfUsers(options);
+console.log(list)'
+
+Test 2(Shrutwa) - Pass:
+	Successfully generates a female user.
+Code Used
+let options = {
+    gender: "female",
+    custom_email_domain: null,
+    email_length: 0,
+    include_special_password: false,
+    password_length: 0
+}
+let list = GenerateRandomListOfUsers(options);
+console.log(list)'
+
+Test 3(Shrutwa) - Pass:
+	Successfully generates multiple users.
+Code Used
+let options = {
+    outputType: "xml", 
+    numberOfUsers: 20,
+    gender: "male",
+    custom_email_domain: "@company.com",
+    email_length: 20,
+    include_special_password: true,
+    password_length: 20
+}
+let user = GenerateRandomUser(options);
+console.log(user)'
