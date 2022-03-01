@@ -62,3 +62,10 @@ console.log(user)'
 # Want to contribute
 If you're interested in contributing, feel free to
 create an issue and a pull request for approval.
+
+Viraj Patel(Lead): The Ohio State University
+
+Shrutwa Soni: The Ohio State University
+
+<a href="https://github.com/viraj325"><img src="https://avatars.githubusercontent.com/u/37918393?v=4" title="Viraj Patel(Lead)" width="60" height="60"></a>
+<a href="https://github.com/Luna17072310"><img src="https://avatars.githubusercontent.com/u/100733352?v=4" title="Shrutwa Soni" width="60" height="60"></a>
