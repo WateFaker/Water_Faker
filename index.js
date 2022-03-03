@@ -1,6 +1,9 @@
 'use strict';
-import { v4 as uuidv4 } from 'uuid';
-import builder from "xmlbuilder";
+//import { v4 as uuidv4 } from 'uuid';
+//import builder from "xmlbuilder";
+
+let builder = require('xmlbuilder')
+let uuid = require('uuid')
 
 /**
  * What this library needs to do?
@@ -62,7 +65,7 @@ const GenerateUserEmail = () => {
 
 const GenerateUserID = () => {
     return new Promise((resolve, reject) => {
-        let id = uuidv4()
+        let id = uuid.v4()
         id != null ? resolve(id) : reject("Unable to generate a userID, try again");
     });
 };
@@ -102,7 +105,7 @@ const generateListOfUsers = (options) => {
  */
 const generateUser = (options) => {
     return {
-        id: uuidv4(),
+        id: uuid.v4(),
         name: generateName(options.gender || null),
         email: generateEmail(options.custom_email_domain || null, options.email_length || 0),
         password: generatePassword(options.include_special_password || true, options.password_length || 0),
