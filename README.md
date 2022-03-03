@@ -59,6 +59,11 @@ let list = GenerateRandomListOfUsers(options);
 console.log(list)'
 ```
 
+# Stuck on an Error?
+'''
+
+'''
+
 # Want to contribute
 If you're interested in contributing, feel free to
 create an issue and a pull request for approval.
