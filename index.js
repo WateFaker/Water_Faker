@@ -181,5 +181,10 @@ function generateName(gender) {
 
 module.exports = {
     GenerateRandomListOfUsers: GenerateRandomListOfUsers,
-    GenerateRandomUser: GenerateRandomUser
+    GenerateRandomUser: GenerateRandomUser,
+    GenerateUserName: GenerateUserName,
+    GenerateUserProfileImage: GenerateUserProfileImage,
+    GenerateUserEmail: GenerateUserEmail,
+    GenerateUserID: GenerateUserID,
+    GenerateUserPassword: GenerateUserPassword
 };

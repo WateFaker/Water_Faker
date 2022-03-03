@@ -1,6 +1,6 @@
 {
   "name": "water_faker",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "An library that can be used to generate fake user data, read the read.me for more details.",
   "main": "index.js",
   "scripts": {
