@@ -13,15 +13,19 @@ import builder from "xmlbuilder";
     return results;
 };*/
 
-var exports = module.exports = {};
-exports.GenerateRandomListOfUsers = function (options) {
+module.exports = {
+    GenerateRandomListOfUsers: GenerateRandomListOfUsers,
+    GenerateRandomUser: GenerateRandomUser
+};
+
+const GenerateRandomListOfUsers = (options) => {
     return new Promise((resolve, reject) => {
         let userList = generateListOfUsers(options);
         userList != null ? resolve(userList) : reject("Unable to generate a list of users, try again.")
     });
 }
 
-exports.GenerateRandomUser = function () {
+const GenerateRandomUser = () => {
     return new Promise((resolve, reject) => {
         let options = {
             gender: "",
@@ -35,35 +39,35 @@ exports.GenerateRandomUser = function () {
     });
 };
 
-exports.GenerateUserName = function (gender) {
+const GenerateUserName = (gender) => {
     return new Promise((resolve, reject) => {
         let name = generateName(gender || "")
         name != null ? resolve(name) : reject("Unable to generate a name, try again");
     });
 };
 
-exports.GenerateUserPassword = function () {
+const GenerateUserPassword = () => {
     return new Promise((resolve, reject) => {
         let password = generatePassword(true, 0)
         password != null ? resolve(password) : reject("Unable to generate a password, try again");
     });
 };
 
-exports.GenerateUserEmail = function () {
+const GenerateUserEmail = () => {
     return new Promise((resolve, reject) => {
         let email = generateEmail(null, 0)
         email != null ? resolve(email) : reject("Unable to generate a email, try again");
     });
 };
 
-exports.GenerateUserID = function () {
+const GenerateUserID = () => {
     return new Promise((resolve, reject) => {
         let id = uuidv4()
         id != null ? resolve(id) : reject("Unable to generate a userID, try again");
     });
 };
 
-exports.GenerateUserProfileImage = function () { return "https://picsum.photos/200/300"; };
+const GenerateUserProfileImage = () => { return "https://picsum.photos/200/300"; };
 
 /**
  * variable options may consist of the following values:

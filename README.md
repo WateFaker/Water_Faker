@@ -37,8 +37,8 @@ let options = {
     include_special_password: false,
     password_length: 0
 }
-let list = GenerateRandomListOfUsers(options);
-console.log(list)'
+let user = GenerateRandomUser(options);
+console.log(user)'
 ```
 
 ## Generate list of random users
@@ -55,8 +55,8 @@ let options = {
     include_special_password: true,
     password_length: 20
 }
-let user = GenerateRandomUser(options);
-console.log(user)'
+let list = GenerateRandomListOfUsers(options);
+console.log(list)'
 ```
 
 # Want to contribute
